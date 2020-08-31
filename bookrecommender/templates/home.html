@@ -1,17 +1,158 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Recommendation</title>
-</head>
-<body>
-    
-<div class="container">
-    <div class="row">
-        <h1> Hello,<br>
-             Welcome this is just an simple UI for book recommendation hope it does work</h1>
+{% extends 'base.html'%} {% block head%}
+<title>Booke recommendor</title>
+{% endblock %} {%block body%}
+<div class="container-fluid">
+  <div class="row">
+    <div class="card mt-2 mr-2">
+      <img
+        src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1466865542l/18144590._SY475_.jpg"
+        class="card-img-top"
+        alt="The alchemist"
+      />
+      <div class="card-body">
+        <h5 class="card-title">The Alchemist</h5>
+        <p class="card-text">
+          Paulo Coelho's enchanting novel has inspired a devoted following
+          around the world.he story of Santiago is an eternal testament to the
+          transforming power of our dreams and the importance of listening to
+          our hearts.
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Rating:3.87</li>
+        <!-- <li class="list-group-item">Dapibus ac facilisis in</li>
+                  <li class="list-group-item">Vestibulum at eros</li> -->
+      </ul>
     </div>
+    <div class="card mt-2 mr-2">
+      <img
+        src="https://scribblesofsoul.com/wp-content/uploads/2011/03/monk-who-sold-his-ferrari.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">The Monk who sold is Ferrari</h5>
+        <p class="card-text">
+          A wonderfully crafted fable, The Monk Who Sold His Ferrari tells the
+          extraordinary story of Julian Mantle, a lawyer forced to confront the
+          spiritual crisis of his out-of-balance life.
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Rating:3.85</li>
+        <!-- <li class="list-group-item">Dapibus ac facilisis in</li>
+                  <li class="list-group-item">Vestibulum at eros</li> -->
+      </ul>
+    </div>
+    <div class="card mt-2 mr-2">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7e/Gone_Girl_%28Flynn_novel%29.jpg/220px-Gone_Girl_%28Flynn_novel%29.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">Gone girl</h5>
+        <p class="card-text">
+          On a warm summer morning in North Carthage, Missouri, it is Nick and
+          Amy Dunne’s fifth wedding anniversary.
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Rating:4.07</li>
+        <!-- <li class="list-group-item">Dapibus ac facilisis in</li>
+                  <li class="list-group-item">Vestibulum at eros</li> -->
+      </ul>
+    </div>
+    <div class="card mt-2 mr-2">
+      <img
+        src="https://www.bookmart.me/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/t/h/the_devotion_of_suspect_x.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">The devotion of suspect X</h5>
+        <p class="card-text">
+            Yasuko lives a quiet life, working in a Tokyo bento shop, a good mother to her only child. But when her ex-husband appears at her door without warning one day, her comfortable world is shattered.
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Rating:4.13</li>
+        <!-- <li class="list-group-item">Dapibus ac facilisis in</li>
+                  <li class="list-group-item">Vestibulum at eros</li> -->
+      </ul>
+    </div>
+    <div class="card mt-2 mr-2">
+      <img
+        src="https://www.studycrux.com/image/5cf6438736e57427eaff6c61"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">Megaiving</h5>
+        <p class="card-text">
+            elite athletes and wildly successful entrepreneurs in the West to learned philosophers and wise sages living high in the Himalayan Mountains of the East, Robin Sharma searched for peak performers who had created lives filled with prosperity, passion and peace.
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Rating:3.94</li>
+        <!-- <li class="list-group-item">Dapibus ac facilisis in</li>
+                  <li class="list-group-item">Vestibulum at eros</li> -->
+      </ul>
+    </div>
+    <div class="card mt-2 mr-2">
+      <img
+        src="https://jamesclear.com/wp-content/uploads/2020/05/2-Million-Badge-e1590421323971-994x1200.png"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">Atomic Habits</h5>
+        <p class="card-text">
+            No matter your goals, Atomic Habits offers a proven framework for improving--every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Rating:4.35</li>
+        <!-- <li class="list-group-item">Dapibus ac facilisis in</li>
+                  <li class="list-group-item">Vestibulum at eros</li> -->
+      </ul>
+    </div>
+    <div class="card mt-2 mr-2">
+      <img
+        src="https://kbimages1-a.akamaihd.net/3a43258f-8286-40f4-8fef-26b23223be56/353/569/90/False/and-then-there-were-none-1.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">And Then There Were None </h5>
+        <p class="card-text">
+            First, there were ten—a curious assortment of strangers summoned as weekend guests to a little private island off the coast of Devon. Their host, an eccentric millionaire unknown to all of them, is nowhere to be found.
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Rating:4.26</li>
+        <!-- <li class="list-group-item">Dapibus ac facilisis in</li>
+                  <li class="list-group-item">Vestibulum at eros</li> -->
+      </ul>
+    </div>
+    <div class="card mt-2 mr-2">
+      <img
+        src="https://kbimages1-a.akamaihd.net/50658d66-8242-468e-b533-d56a50552e87/353/569/90/False/harry-potter-and-the-order-of-the-phoenix-5.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">Harry Potter and the Order of the Phoenix</h5>
+        <p class="card-text">
+            There is a door at the end of a silent corridor. And it’s haunting Harry Pottter’s dreams. Why else would he be waking in the middle of the night, screaming in terror?
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Rating:4.50</li>
+        <!-- <li class="list-group-item">Dapibus ac facilisis in</li>
+                  <li class="list-group-item">Vestibulum at eros</li> -->
+      </ul>
+    </div>
+  </div>
 </div>
-</body>
-</html>
+{% endblock %}
