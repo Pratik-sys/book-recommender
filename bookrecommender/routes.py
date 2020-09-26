@@ -10,11 +10,14 @@ import os
 def home():
     return render_template("home.html")
 
-@app.route('/recommender', methods=['POST', 'GET'])
-def recommender():
-    data_read = pd.read_csv("/Users/bug/book-recommendation/bookrecommender/dataset.csv")
-    data_sort = data_read.sort_values(by=['rating-avg'],ascending=False).head(n=5)
-    return render_template("test.html", data_sort= data_sort)
+@app.route('/test', methods=['POST', 'GET'])
+def test():
+    data_read = pd.read_csv("/Users/bug/book-recommendation/bookrecommender/new_dataset.csv")
+    # data_sort = data_read.sort_values(by=['rating-avg'],ascending=False).head(n=5)
+    p = pd.DataFrame(['AI'],columns=['Tags'])
+    x = pd.merge(p,data_read.sort_values(by=['rating-avg'], ascending=False))
+    h = x.to_html()
+    return render_template("test.html", h=h)
 
 @app.route('/display',methods=['POST', 'GET'])
 def display():
