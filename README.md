@@ -21,6 +21,11 @@ $ cd book-recommender
 $ python3 run.py 
 ```
 
+## view  deployment
+
+https://recommender-book.herokuapp.com/
+
+
 ### TODO
 
 - [x] Collecting the Datasets from kaggle.
