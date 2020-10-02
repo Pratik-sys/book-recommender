@@ -15,7 +15,7 @@ def home():
 @app.route("/test", methods=["POST", "GET"])
 def test():
     form = GetField(request.form)
-    data_read = pd.read_csv("./bookrecommender/new_dataset.csv")
+    data_read = pd.read_csv("./bookrecommender/dataset.csv")
     # data_sort = data_read.sort_values(by=['rating-avg'],ascending=False).head(n=5)
     value = form.title.data
     print(value)
