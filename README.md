@@ -23,9 +23,9 @@ $ python3 run.py
 
 ### TODO
 
-- [ ] Collecting the Datasets from kaggle.
+- [x] Collecting the Datasets from kaggle.
 - [ ] Functional UI using bootstrap 
-- [ ] Hosting application on Heroku.
+- [x] Hosting application on Heroku.
 - [ ] Documenting all the things properly.
-- [ ] get to know about Panda's library.
+- [x] get to know about Panda's library.
 
