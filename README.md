@@ -34,6 +34,6 @@ https://recommender-book.herokuapp.com/
 - [ ] Documenting all the things properly.
 - [x] Get to know about Panda's library.
 - [x] Display books in cards form 
-- [ ] Adding functionality to search by books
+- [ ] Adding functionality of "search by books"
 - [ ] Adding Bootstrap Modals to each books for description.
 
