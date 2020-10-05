@@ -32,5 +32,8 @@ https://recommender-book.herokuapp.com/
 - [ ] Functional UI using bootstrap 
 - [x] Hosting application on Heroku.
 - [ ] Documenting all the things properly.
-- [x] get to know about Panda's library.
+- [x] Get to know about Panda's library.
+- [x] Display books in cards form 
+- [ ] Adding functionality to search by books
+- [ ] Adding Bootstrap Modals to each books for description.
 
