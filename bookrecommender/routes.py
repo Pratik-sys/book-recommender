@@ -17,7 +17,7 @@ def home():
     )
     df = pd.DataFrame(merge_books)
     return render_template(
-        "test.html",
+        "home.html",
         df=df.to_html(),
         form=form,
         column=df.columns.values,
