@@ -1,18 +1,29 @@
 {% extends 'base.html'%} {% block head%}
 <title>Book recommendor</title>
 {% endblock %} {%block body%}
-<div class="container-fluid">
-  <div class="row">
+<div class="container" style="margin-top: 30px">
+  <div class="col">
+    <form method="POST" action="">
+      <div class="form-group">
+        <h2>{{form.title.label(class="form-control-label")}}</h2>
+        {{form.title(class="form-control")}}
+      </div>
+      <div class="form-group">{{form.submit(class="btn btn-primary")}}</div>
+    </form>
+  </div>
+  <div class="container-fluid" style="margin-top: 30px">
+    <div class="row">
+    {%for row in row_data%}
     <div class="card mt-2 mr-2">
-      <a href="{{url_for('display')}}">
+      <!-- <a href="{{url_for('display')}}"> -->
       <img
-        src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1566811200l/52458116._SX0_SY0_.jpg"
+        src="{{row[1]}}"
         class="card-img-top"
-        alt="The alchemist"  
+        alt="#"  
       />
     </a>
       <div class="card-body">
-        <h5 class="card-title">Engineering Mechanics</h5>
+        <h5 class="card-title">{{row[2]}}</h5>
         <p class="card-text">
           <!-- Paulo Coelho's enchanting novel has inspired a devoted following
           around the world.he story of Santiago is an eternal testament to the
@@ -21,88 +32,17 @@
         </p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">Rating:4.0</li>
-        <!-- <li class="list-group-item">Dapibus ac facilisis in</li>
-                  <li class="list-group-item">Vestibulum at eros</li> -->
+        <li class="list-group-item"><h5>Tag:</h5>{{row[0]}}</li>
+        <li class="list-group-item"><h5>Rating:</h5>{{row[4]}}</li>
+        <li class="list-group-item"><h5>Language:</h5>{{row[8]}}</li>
+        <li class="list-group-item"><h5>Publisher:</h5>{{row[9]}}</li>
+        
+
       </ul>
     </div>
-    <div class="card mt-2 mr-2">
-      <img
-        src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1488627609l/34460416._SX318_.jpg"
-        class="card-img-top"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-title">Digital Image Procesing</h5>
-        <!-- <p class="card-text">
-          A wonderfully crafted fable, The Monk Who Sold His Ferrari tells the
-          extraordinary story of Julian Mantle, a lawyer forced to confront the
-          spiritual crisis of his out-of-balance life.
-        </p> -->
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Rating:3.85</li>
-        <!-- <li class="list-group-item">Dapibus ac facilisis in</li>
-                  <li class="list-group-item">Vestibulum at eros</li> -->
-      </ul>
-    </div>
-    <div class="card mt-2 mr-2">
-      <img
-        src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1502062734l/35926363._SX318_.jpg
-        "
-        class="card-img-top"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-title">Higher Engineering Mathematics</h5>
-        <!-- <p class="card-text">
-          On a warm summer morning in North Carthage, Missouri, it is Nick and
-          Amy Dunne’s fifth wedding anniversary.
-        </p> -->
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Rating:4.07</li>
-        <!-- <li class="list-group-item">Dapibus ac facilisis in</li>
-                  <li class="list-group-item">Vestibulum at eros</li> -->
-      </ul>
-    </div>
-    <div class="card mt-2 mr-2">
-      <img
-        src="https://rukminim1.flixcart.com/image/352/352/book/5/3/3/microwave-devices-and-circuits-original-imaerfy3exv3gwd4.jpeg?q=70"
-        class="card-img-top"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-title">Microwave Devices and Circuits</h5>
-        <!-- <p class="card-text">
-            Yasuko lives a quiet life, working in a Tokyo bento shop, a good mother to her only child. But when her ex-husband appears at her door without warning one day, her comfortable world is shattered.
-        </p> -->
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Rating:4.13</li>
-        <!-- <li class="list-group-item">Dapibus ac facilisis in</li>
-                  <li class="list-group-item">Vestibulum at eros</li> -->
-      </ul>
-    </div>
-    <div class="card mt-2 mr-2">
-      <img
-        src="https://i0.wp.com/easyengineering.net/wp-content/uploads/2018/03/013032681X.jpg?fit=457%2C648&ssl=1
-        "
-        class="card-img-top"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-title">Optical Fiber Communications: Principles and Practice</h5>
-        <!-- <p class="card-text">
-            elite athletes and wildly successful entrepreneurs in the West to learned philosophers and wise sages living high in the Himalayan Mountains of the East, Robin Sharma searched for peak performers who had created lives filled with prosperity, passion and peace.
-        </p> -->
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Rating:3.94</li>
-        <!-- <li class="list-group-item">Dapibus ac facilisis in</li>
-                  <li class="list-group-item">Vestibulum at eros</li> -->
-      </ul>
-    </div>
+    {%endfor%}
+  </div>
   </div>
 </div>
+
 {% endblock %}
