@@ -51,6 +51,7 @@ img{
 }
 
 .card{
+    overflow: hidden;
     float: left;
     width: calc(25% - 20px);
     padding: 10px;
