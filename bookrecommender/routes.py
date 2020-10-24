@@ -11,10 +11,10 @@ DEFAULT_H = "Python Programming"
 @app.route("/", methods=["POST", "GET"])
 def home():
     if request.method == "POST":
-        h = request.form["catdrop"]
+        h = request.form["catdrop"].lower()
     else:
         h = DEFAULT_H
-    data_read = pd.read_csv("./bookrecommender/new_dataset.csv")
+    data_read = pd.read_csv("./bookrecommender/new.csv")
     new = pd.DataFrame(data_read)
     sort_books = pd.DataFrame([h], columns=["Tags"])
     merge_books = pd.merge(
