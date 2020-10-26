@@ -1,8 +1,7 @@
 # Book Recommender 
 
-- A basic **Book recommender** usig collabrative filtering tchnique. The datasets that would be used, will be from [Kaggle](https://www.kaggle.com/datasets) mostly.
-
-- The Framework that is going to be used in flask which have the ability to recommend the books as per th ratings of the numerous users.
+- A basic **Book recommender** usig collabrative filtering tchnique.
+- Based on the python's Framework [Flask](https://flask.palletsprojects.com/en/1.1.x/) and prominent Data Analyis library [Pandas](https://pandas.pydata.org/). The application has the ability to recommend the books as per the ratings of the numerous users.
 
 
 ---
@@ -31,9 +30,8 @@ https://recommender-book.herokuapp.com/
 - [x] Collecting the Datasets from kaggle.
 - [ ] Functional UI using bootstrap 
 - [x] Hosting application on Heroku.
-- [ ] Documenting all the things properly.
+- [x] Documenting all the things properly.
 - [x] Get to know about Panda's library.
 - [x] Display books in cards form 
-- [ ] Adding functionality of "search by books"
-- [ ] Adding Bootstrap Modals to each books for description.
-
+- [x] Add drop down for better understanding for users
+- [x] Adding Bootstrap Modals to each books for description.
