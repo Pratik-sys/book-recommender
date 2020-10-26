@@ -17,6 +17,13 @@
       <option>Machine Learning</option>
       <option>Python Programming</option>
       <option>Programming</option>
+      <option>Mathematics</option>
+      <option>Artificial Intelligence</option> 
+      <option>C Programming</option> 
+      <option>C++ Programming</option> 
+      <option>Image Processing</option> 
+      <option>VLSI</option> 
+      <option>Java Programming</option> 
     </select>
   </form>
 </nav>
@@ -24,13 +31,27 @@
   <div class="row">
     {%for row in row_data%}
     <div class="card mx-auto" style="font-size: medium">
-      <img src="{{row[1]}}" class="card-img-top" alt="#" />
+      <img src="{{row[1]}}" class="card-img-top" alt="#" data-toggle="modal" data-target="#exampleModal">
       <div class="card-body" style="color: white">
         <h5 class="card-title" style="font-size: medium">{{row[2]}}</h5>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">{{row[2]}}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            {{row[5]}}
+          </div>
+        </div>
       </div>
     </div>
     {%endfor%}
   </div>
 </div>
-
 {% endblock %}
