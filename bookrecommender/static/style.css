@@ -1,13 +1,13 @@
 body{
     font-family: 'B612', sans-serif; 
     /* font-family: 'Roboto Condensed', sans-serif; */
-    background-color:#100c08;
+    background-color:#252E39;
 }
 input[type='text'] {  
     font-family: 'Roboto Condensed', sans-serif; 
 }
 .navbar{
-    background-color:#ce1127;
+    background-color:#0F171E;
 }
 img{
     height: 8cm;
@@ -19,7 +19,7 @@ img{
 }
 
 .card{
-    background-color: #1b1b1b;
+    background-color: #0F171E;
     width: calc(25% - 20px);
     margin-bottom: 5rem;  
     border-radius:5px;
