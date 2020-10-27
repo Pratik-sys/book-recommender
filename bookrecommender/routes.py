@@ -23,3 +23,7 @@ def home():
 
     return render_template("home.html",row_data=list(df.values.tolist()))
 
+@app.route("/display", methods=["POST", "GET"])
+def display():
+    return render_template('display.html')
+    
