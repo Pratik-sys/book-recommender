@@ -1,0 +1,73 @@
+{% extends 'base.html'%} {% block head%}
+<title>Book recommendor</title>
+{% endblock %}
+{%block body%}
+<nav class="navbar navbar-expand-lg" style="font-size: 130%;">
+    <a class="navbar-brand" href="{{url_for('home')}}" style="color: black; text-indent: 550px;">BOOK RECOMMENDER</a>
+  </nav>
+  <div class="container-lg">
+    <div class="jumbotron" style="background-color: #100c08; color: white; text-align: center;">
+      <h1>G.H. Raisoni College of Engineering, Nagpur</h1>
+  </div>
+<div class="container" style="color: white;margin-top: 30px;">
+    <div class="row">
+      <div class="col-sm" style="font-size: 20px;">
+        <h3 style="text-align: center;">
+            Guided By:
+        </h3>
+        
+        <br>
+        <p style="text-align: center;">
+            Dr. Kapil Jajulwar
+        </p>
+        
+        <br>
+        <h3 style="text-align: center;">
+            Made By:
+        </h3>
+        <p style="text-align: center;">
+            Pratik Pithore
+            <br>
+            Prateek Bansal
+            <br>
+            Tejas Tamney
+            <br>
+            Raj Gugnani
+            <br>
+            Rounak Poptani
+        </p>
+
+
+      </div>
+
+      <div class="col-sm"style="font-size: 20px;">
+        <h3 style=" text-align:center">
+        Vision
+    </h3>
+        <br>
+    <p style="text-align: center;">
+    Our idea is to ease out the task for engineering students to select a book which is BEST for them to refer through our Recommender!
+</p>
+      </div>
+      <div class="col-sm"style="font-size: 20px;">
+          <h3 style="text-align: center;">
+            How it Works?
+          </h3>
+          <br>
+     <p style="text-align: center;">
+        STEP 1:Click on the proceed button given below
+        <br>
+        <br>
+        STEP 2:Select a category of your choice
+        <br>
+        <br>
+        STEP 3:There You GO!
+        <br>
+        You will have our
+        RECOMMENDATIONS!
+     </p>
+     <button type="button" class="btn btn-primary" style="margin-left: 8rem;">Proceed</button>
+      </div>
+    </div>
+  </div>
+{% endblock %}
