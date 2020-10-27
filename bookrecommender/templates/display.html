@@ -3,71 +3,84 @@
 {% endblock %}
 {%block body%}
 <nav class="navbar navbar-expand-lg" style="font-size: 130%;">
-    <a class="navbar-brand" href="{{url_for('home')}}" style="color: black; text-indent: 550px;">BOOK RECOMMENDER</a>
+  <div class="row" style="text-align: center;padding-left: 30rem;">
+    <p class="navbar-brand" href="{{url_for('home')}}" style="color: #B1B1B1;">
+      G.H. Raisoni College of Engineering <br>
+      BOOK RECOMMENDER</p>
+  </div>
+    
   </nav>
   <div class="container-lg">
-    <div class="jumbotron" style="background-color: #100c08; color: white; text-align: center;">
+    <!-- <div class="jumbotron" style="background-color: #252E39; color: white; text-align: center;">
       <h1>G.H. Raisoni College of Engineering, Nagpur</h1>
+  </div> -->
   </div>
-<div class="container" style="color: white;margin-top: 30px;">
+  <div class="container-lg" style="margin-top: 120px">
+    <div class=col>
     <div class="row">
-      <div class="col-sm" style="font-size: 20px;">
-        <h3 style="text-align: center;">
-            Guided By:
-        </h3>
-        
-        <br>
-        <p style="text-align: center;">
+      <!-- card 1 -->
+      <div class="card mx-auto text-center">
+        <div class="card-body" >
+          <h5 class="card-title" style="color: white;">Guided By</h5>
+          <p style="color: wheat;">
             Dr. Kapil Jajulwar
-        </p>
-        
-        <br>
-        <h3 style="text-align: center;">
-            Made By:
-        </h3>
-        <p style="text-align: center;">
-            Pratik Pithore
+          </p>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title" style="color: white;">Made By:</h5>
+          <p style="align-content: space-between;">
+            <ul class="list" style="color: wheat; text-align: left;">
+              <li>
+                Pratik Pithore
+              </li>
+              <li>
+                Prateek Bansal
+              </li>
+              <li>
+                Tejas Tamney
+              </li>
+              <li>
+                Raj Gugnani
+              </li>
+              <li>
+                Rounak Poptani
+              </li>
+            </ul>
+          </p>
+        </div>
+      </div>    
+      <!-- card 2 -->
+      <div class="card mx-auto text-center">
+        <div class="card-body" >
+          <h5 class="card-title" style="color: white;">Vision</h5>
+        </div>
+        <div class="card-body">
+          <p style="color: wheat;">
+            Our idea is to ease out the task for engineering students to select a book which is BEST for them to refer through our Recommender!
+          </p>
+        </div>
+      </div>    
+      <!-- card3 -->
+      <div class="card mx-auto text-center">
+        <div class="card-body" >
+          <h5 class="card-title" style="color: white;">How it Works?</h5>
+        </div>
+        <div class="card-body">
+          <p style="color: wheat;">
+            STEP 1:Click on the proceed button given below
             <br>
-            Prateek Bansal
             <br>
-            Tejas Tamney
+            STEP 2:Select a category of your choice
             <br>
-            Raj Gugnani
             <br>
-            Rounak Poptani
-        </p>
-
-
+            STEP 3:There You GO!
+            <br>
+            You will have our
+            RECOMMENDATIONS!
+         </p>
+         <a href="{{url_for('home')}}">
+          <button type="button" class="btn btn-primary">Proceed</button>
+         </a>
+        </div>
       </div>
-
-      <div class="col-sm"style="font-size: 20px;">
-        <h3 style=" text-align:center">
-        Vision
-    </h3>
-        <br>
-    <p style="text-align: center;">
-    Our idea is to ease out the task for engineering students to select a book which is BEST for them to refer through our Recommender!
-</p>
-      </div>
-      <div class="col-sm"style="font-size: 20px;">
-          <h3 style="text-align: center;">
-            How it Works?
-          </h3>
-          <br>
-     <p style="text-align: center;">
-        STEP 1:Click on the proceed button given below
-        <br>
-        <br>
-        STEP 2:Select a category of your choice
-        <br>
-        <br>
-        STEP 3:There You GO!
-        <br>
-        You will have our
-        RECOMMENDATIONS!
-     </p>
-     <button type="button" class="btn btn-primary" style="margin-left: 8rem;">Proceed</button>
-      </div>
-    </div>
-  </div>
 {% endblock %}
