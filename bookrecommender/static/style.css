@@ -1,7 +1,8 @@
 body{
     font-family: 'B612', sans-serif; 
     /* font-family: 'Roboto Condensed', sans-serif; */
-    background-color:#252E39;
+    /* background-color:#252E39; */
+    background-image: url("wallpaper2you_240247.png")
 }
 input[type='text'] {  
     font-family: 'Roboto Condensed', sans-serif; 
@@ -16,6 +17,7 @@ img{
 .navbar-brand{
     font-size: 150%;
     font-family: 'B612', sans-serif; 
+    filter: ;
 }
 
 .card{
