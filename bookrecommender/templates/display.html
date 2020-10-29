@@ -2,85 +2,106 @@
 <title>Book recommendor</title>
 {% endblock %}
 {%block body%}
-<nav class="navbar navbar-expand-lg" style="font-size: 130%;">
-  <div class="row" style="text-align: center;padding-left: 30rem;">
-    <p class="navbar-brand" href="{{url_for('home')}}" style="color: #B1B1B1;">
-      G.H. Raisoni College of Engineering <br>
-      BOOK RECOMMENDER</p>
+<nav class="navbar navbar-expand-lg" style="font-size: 100%;">
+  <a>
+    <img src="{{ url_for('static', filename='y.jpg')}}" style="height:2cm; width: 2cm; border-radius: 50%; " alt="" >
+  </a>
+  <div class="row" style="text-align: center; padding-left:10rem;">
+    <p class="navbar-brand" href="{{url_for('home')}}" style="color: whitesmoke;">
+      G.H. Raisoni College of Engineering, Nagpur <br>
+      UG Final Year Project<br>
+      Topic: Design of Books Recommendation System using Collaborative Filter Technique</p>
   </div>
     
   </nav>
   <div class="container-lg">
-    <!-- <div class="jumbotron" style="background-color: #252E39; color: white; text-align: center;">
+    <!-- <div class="jumbotron" style="background-color: #252E39; color: black; text-align: center;">
       <h1>G.H. Raisoni College of Engineering, Nagpur</h1>
   </div> -->
   </div>
-  <div class="container-lg" style="margin-top: 120px">
+  <div class="container-lg" style="margin-top: 80px">
     <div class=col>
     <div class="row">
-      <!-- card 1 -->
-      <div class="card mx-auto text-center">
-        <div class="card-body" >
-          <h5 class="card-title" style="color: white;">Guided By</h5>
-          <p style="color: wheat;">
-            Dr. Kapil Jajulwar
-          </p>
-        </div>
+      <div class="card mx-auto" style="width:25rem">
         <div class="card-body">
-          <h5 class="card-title" style="color: white;">Made By:</h5>
+          <h5 class="card-title" style="color: black; text-align: center;">Guided By</h5>
+          <p style="color: black; ;">
+            <h5 style="text-align: center;">
+              Dr. Kapil Jajulwar<br>
+              (Assistant Professor, ETC, GHRCE)
+            </h5>
+            <hr>
+          </p>
+          <h5 class="card-title" style="color: black;">Project By:</h5>
           <p style="align-content: space-between;">
-            <ul class="list" style="color: wheat; text-align: left;">
+            <ul class="list" style="color: black; text-align: left;">
               <li>
-                Pratik Pithore
+                Pratik Pithore<br>
+                (UG Student, ETC, GHRCE)
               </li>
               <li>
-                Prateek Bansal
+                Prateek Bansal<br>
+                (UG Student, ETC, GHRCE)
               </li>
               <li>
-                Tejas Tamney
+                Tejas Tamney<br>
+                (UG Student, ETC, GHRCE)
               </li>
               <li>
-                Raj Gugnani
+                Raj Gugnani<br>
+                (UG Student, ETC, GHRCE)
               </li>
               <li>
-                Rounak Poptani
+                Rounak Poptani<br>
+                (UG Student, ETC, GHRCE)
               </li>
             </ul>
           </p>
         </div>
-      </div>    
-      <!-- card 2 -->
-      <div class="card mx-auto text-center">
-        <div class="card-body" >
-          <h5 class="card-title" style="color: white;">Vision</h5>
-        </div>
+
+    </div>
+      <div class="card mx-auto"style="width:25rem">
         <div class="card-body">
-          <p style="color: wheat;">
+          <h5 class="card-title" style="color: black; text-align: center;">Project Vision</h5>
+          <p style="color: black; text-align: center;">
             Our idea is to ease out the task for engineering students to select a book which is BEST for them to refer through our Recommender!
           </p>
+          <hr>
+          <div class="card-body">
+            <h5 class="card-title" style="color: black; text-align: center;">How it Works?</h5>
+            <p style="color: black;">
+              STEP 1:Click on the proceed button given below
+              <br>
+              <br>
+              STEP 2:Select a category of your choice
+              <br>
+              <br>
+              STEP 3:There You GO!
+              <br>
+              You will have our
+              RECOMMENDATIONS!
+           </p>
+           <a href="{{url_for('home')}}">
+            <button type="button" class="btn btn-outline-danger" style="margin-left: 7rem;">Proceed</button>
+           </a>
+          </div>
         </div>
-      </div>    
-      <!-- card3 -->
-      <div class="card mx-auto text-center">
-        <div class="card-body" >
-          <h5 class="card-title" style="color: white;">How it Works?</h5>
         </div>
-        <div class="card-body">
-          <p style="color: wheat;">
-            STEP 1:Click on the proceed button given below
-            <br>
-            <br>
-            STEP 2:Select a category of your choice
-            <br>
-            <br>
-            STEP 3:There You GO!
-            <br>
-            You will have our
-            RECOMMENDATIONS!
-         </p>
-         <a href="{{url_for('home')}}">
-          <button type="button" class="btn btn-primary">Proceed</button>
-         </a>
+      </div>
+        </div>
+        <div class="row">
+          <div class="card mx-auto"style="width:25rem">
+            <div class="card-body">
+              <h5 class="card-title" style="color: black; text-align: center;">Summary</h5>
+              <p>
+                Number of books:
+                <br>
+                xyz
+                <br>
+                zxy
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 {% endblock %}
