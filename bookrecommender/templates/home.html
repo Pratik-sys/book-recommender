@@ -1,11 +1,115 @@
 {% extends 'base.html'%} {% block head%}
 <title>Book recommendor</title>
 {% endblock %} {%block body%}
-
+<div class="sidenav">
+  <h4 style="color: white; text-align: center;text-decoration: underline;">
+    Our Recommendation
+  </h4>
+  <br>
+  <h5 style="color: white; text-align: center;">
+    Machine Learning:
+  </h5>
+  <p style="color: gold;text-align: center;">
+    Rating: 4.5<br>
+  </p>
+  <p style="color: white; text-align: center;">
+    Fundamentals of Machine Learning for Predictive Data Analytics
+  </p>
+  <hr style="background-color: white;">
+  <h5 style="color: white; text-align: center;">
+    Python Programming
+  </h5>
+  <p style="color: gold; text-align: center;">
+    Rating:4.75
+  </p>
+  <p style="color: white;text-align: center;">
+    Fluent Python: Clear, Concise, and Effective Programming
+  </p>
+  <hr style="background-color: white;">
+  <h5 style="color: white; text-align: center;">
+    Programming
+  </h5>
+  <p style="color: gold; text-align: center;">
+    Rating:4.8
+  </p>
+  <p style="color: white;text-align: center;">
+    Art of Computer Programming
+  </p>
+  <hr style="background-color: white;">
+  <h5 style="color: white; text-align: center;">
+    Mathematics
+  </h5>
+  <p style="color: gold; text-align: center;">
+    Rating:4.35
+  </p>
+  <p style="color: white; text-align: center;">
+    Higher Engineering Mathematics
+  </p>
+  <hr style="background-color: white;">
+  <h5 style="color: white; text-align: center;">
+    Artificial Intelligence
+  </h5>
+  <p style="color: gold; text-align: center;">
+    Rating:4.42
+  </p>
+  <p style="color: white; text-align: center;">
+    Make Your Own Neural Network
+  </p>
+  <hr style="background-color: white;">
+  <h5 style="color: white; text-align: center;">
+    C Programming
+  </h5>
+  <p style="color: gold; text-align: center;">
+    Rating:4.8
+  </p>
+  <p style="color: white; text-align: center;">
+    Basic Computation and Programming with C
+  </p>
+  <hr style="background-color: white;">
+  <h5 style="color: white; text-align: center;">
+    C++ Programming
+  </h5>
+  <p style="color: gold; text-align: center;">
+    Rating:4.02
+  </p>
+  <p style="color: white; text-align: center;">
+    Programming: C ++ Programming: Programming Language for Beginners: Learn in A Day!
+  </p>
+  <hr style="background-color: white;">
+  <h5 style="color: white; text-align: center;">
+    Image Processing
+  </h5>
+  <p style="color: gold; text-align: center;">
+    Rating:4.92
+  </p>
+  <p style="color: white; text-align: center;">
+    Handbook of Image and Video Processing
+  </p>
+  <hr style="background-color: white;">
+  <h5 style="color: white; text-align: center;">
+    VLSI
+  </h5>
+  <p style="color: gold; text-align: center;">
+    Rating:4.9
+  </p>
+  <p style="color: white; text-align: center;">
+    Digital VLSI Design
+  </p>
+  <hr style="background-color: white;">
+  <h5 style="color: white; text-align: center;">
+   Java Programming
+  </h5>
+  <p style="color: gold; text-align: center;">
+    Rating:4.5
+  </p>
+  <p style="color: white; text-align: center;">
+    Java All-in-One for Dummies
+  </p>
+</div>
 <nav class="navbar navbar-expand-lg">
-  <a class="navbar-brand" href="{{url_for('home')}}" style="color:#B1B1B1;">Book Recommender</a>
+  <a class="navbar-brand" href="{{url_for('home')}}" style="color:white;">Book Recommender System</a>
   <form method="POST" action="">
-    <div class="row" style="padding-left: 60rem;">
+    <div class="row" style="padding-left:55rem;">
     <select class="selectpicker" id="catdrop" name="catdrop" onchange="this.form.submit()">
       <option>SELECT CATEGORY</option>
       <option>Machine Learning</option>
@@ -22,12 +126,13 @@
   </div>
   </form>
 </nav>
-<div class="container-lg" style="margin-top: 30px">
+
+<div class="container-lg mr-1 " style="margin-top: 30px;">
   <div class=col>
   <div class="row">
     {%for row in row_data%}
     <div class="modal fade" id="exampleModal{{loop.index}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">{{row[2]}}</h5>
@@ -37,25 +142,34 @@
           </div>
           <div class="modal-body">
             {{row[5]}}
+            <hr>
+            <p>Publisher:
+              {{row[8]}}
+            </p>
+            <hr>
+            <p>Date:
+              {{row[6]}}
+            </p>
           </div>
+          
         </div>
       </div>
     </div>
     <div class="card mx-auto text-center">
       <img src="{{row[1]}}" class="card-img-top" alt="#" data-toggle="modal" data-target="#exampleModal{{loop.index}}">
       <div class="card-body" >
-        <h5 class="card-title" style="color: white; font-size: medium;">{{row[2]}}</h5>
+        <h5 class="card-title" style=" font-size: medium;">{{row[2]}}</h5>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item" style="background-color: #0F171E; color: white;">Rating:{{row[4]}}</li>
+        <li class="list-group-item" style="background-color: white; ">Rating:{{row[4]}}</li>
       </ul>
       <div class="card-body">
-        <a href="{{row[9]}}" class="btn btn-primary">Buy Here</a>
+        <a href="{{row[9]}}" class="btn btn-outline-danger">Buy Here</a>
       </div>
     </div>
-
     {%endfor%}
   </div>
 </div>
 </div>
+
 {% endblock %}

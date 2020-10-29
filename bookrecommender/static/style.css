@@ -1,14 +1,9 @@
 body{
     font-family: 'B612', sans-serif; 
-    /* font-family: 'Roboto Condensed', sans-serif; */
-    background-color:#252E39;
-    /* background-image: url("wallpaper2you_240247.png") */
-}
-input[type='text'] {  
-    font-family: 'Roboto Condensed', sans-serif; 
+    background-image: url("photo_2020-10-28\ 22.19.50.jpeg");
 }
 .navbar{
-    background-color:#0F171E;
+    background-color: black;
 }
 img{
     height: 8cm;
@@ -17,21 +12,29 @@ img{
 .navbar-brand{
     font-size: 150%;
     font-family: 'B612', sans-serif; 
-    filter: ;
 }
-
 .card{
-    background-color: #0F171E;
+    background-color:white;
     width: calc(25% - 20px);
-    margin-bottom: 5rem;  
+    margin-bottom: 10rem;  
     border-radius:5px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
-
 .page-footer{
-    background-color: #0F171E;
+    background-color: black;
     position: fixed;
     left: 0;
     bottom: 0;
     right: 0;
+}
+.sidenav {
+    height: 75%;
+    width: 250px;
+    /* left: 0; */
+    top: 0;
+    position: fixed;
+    background-color:darkgrey;
+    overflow-x: hidden;
+    padding-top: 55px;
+    margin-top: 30px;
 }
