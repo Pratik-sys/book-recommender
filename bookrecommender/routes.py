@@ -14,7 +14,7 @@ def home():
         h = request.form["catdrop"].lower()
     else:
         h = DEFAULT_H
-    data_read = pd.read_csv("./bookrecommender/new.csv")
+    data_read = pd.read_csv("./bookrecommender/Dataset.csv")
     sort_books = pd.DataFrame([h], columns=["Tags"])
     merge_books = pd.merge(
         sort_books, data_read.sort_values(by=["rating-avg"], ascending=False)
