@@ -107,23 +107,39 @@
   </p>
 </div>
 <nav class="navbar navbar-expand-lg">
-  <a class="navbar-brand" href="{{url_for('home')}}" style="color:white;">Book Recommender System</a>
-  <form method="POST" action="">
-    <div class="row" style="padding-left:55rem;">
-    <select class="selectpicker" id="catdrop" name="catdrop" onchange="this.form.submit()">
-      <option>SELECT CATEGORY</option>
-      <option>Machine Learning</option>
-      <option>Python Programming</option>
-      <option>Basic Programming</option>
-      <option>Mathematics</option>
-      <option>Artificial Intelligence</option> 
-      <option>C Programming</option> 
-      <option>Image Processing</option> 
-      <option>VLSI</option> 
-      <option>Java Programming</option> 
-    </select>
+  <a class="navbar-brand" href="{{url_for('home')}}">Book Recommender System</a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{{url_for('display')}}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('search')}}">Search</a>
+      </li>
+      <li class="nav-item dropdown">
+          <form method="POST" action="">
+              <div class="row" style="padding-left:5rem;">
+              <select class="selectpicker" id="catdrop" name="catdrop" onchange="this.form.submit()">
+                <option>SELECT CATEGORY</option>
+                <option>Machine Learning</option>
+                <option>Python Programming</option>
+                <option>Basic Programming</option>
+                <option>Mathematics</option>
+                <option>Artificial Intelligence</option> 
+                <option>C Programming</option> 
+                <option>Image Processing</option> 
+                <option>VLSI</option> 
+                <option>Java Programming</option> 
+              </select>
+            </div>
+            </form>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
   </div>
-  </form>
 </nav>
 
 <div class="container-lg mr-1 " style="margin-top: 30px;">
