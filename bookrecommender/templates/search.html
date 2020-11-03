@@ -15,38 +15,95 @@
   </div>
 </div>
 <!-- For Title -->
-  <div class="container-lg" style="margin-top: 30px">
-    <div class="row">
-    {%for x in title%}
-    <div class="card mt-2 mr-2">
-      <img src="{{x[1]}}" class="card-img-top" alt="#">
-      <div class="card-body">
-        <h5 class="card-title">{{x[2]}}</h5>
+<div class="container-lg " style="margin-top: 30px;">
+  <div class=col>
+  <div class="row">
+    {%for titles in title%}
+    <div class="modal fade" id="exampleModal{{loop.index}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">{{titles[2]}}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            {{titles[5]}}
+            <hr>
+            <p>Publisher:
+              {{titles[8]}}
+            </p>
+            <hr>
+            <p>Date:
+              {{titles[6]}}
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="card mx-auto text-center">
+      <img src="{{titles[1]}}" class="card-img-top" alt="#" data-toggle="modal" data-target="#exampleModal{{loop.index}}">
+      <div class="card-body" >
+        <h5 class="card-title" style=" font-size: medium;">{{titles[2]}}</h5>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item"><h5>Rating:</h5>{{x[4]}}</li>
+        <li class="list-group-item" style="background-color: white; ">Rating:{{titles[4]}}</li>
       </ul>
+      <div class="card-body">
+        <a href="{{titles[9]}}" class="btn btn-outline-danger">Buy Here</a>
+      </div>
     </div>
     {%endfor%}
   </div>
-  </div>
+</div>
+</div>
 
 <!-- for publisher -->
-  <div class="container-lg" style="margin-top: 30px">
-    <div class="row">
-    {% for y in publish %}
-    <div class="card mt-2 mr-2">
-      <img src="{{y[1]}}" class="card-img-top" alt="#">
-      <div class="card-body">
-        <h5 class="card-title">{{y[2]}}</h5>
+<div class="container-lg " style="margin-top: 30px;">
+  <div class=col>
+  <div class="row">
+    {%for publishers in publish%}
+    <div class="modal fade" id="exampleModal{{loop.index}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">{{publishers[2]}}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            {{publishers[5]}}
+            <hr>
+            <p>Publisher:
+              {{publishers[8]}}
+            </p>
+            <hr>
+            <p>Date:
+              {{publishers[6]}}
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="card mx-auto text-center">
+      <img src="{{publishers[1]}}" class="card-img-top" alt="#" data-toggle="modal" data-target="#exampleModal{{loop.index}}">
+      <div class="card-body" >
+        <h5 class="card-title" style=" font-size: medium;">{{publishers[2]}}</h5>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item"><h5>Tag:</h5>{{y[0]}}</li>
-        <li class="list-group-item"><h5>Rating:</h5>{{y[4]}}</li>
+        <li class="list-group-item" style="background-color: white; ">Rating:{{publishers[4]}}</li>
       </ul>
+      <div class="card-body">
+        <a href="{{publishers[9]}}" class="btn btn-outline-danger">Buy Here</a>
+      </div>
     </div>
     {%endfor%}
   </div>
-  </div>
+</div>
+</div>
 
 {% endblock %}
