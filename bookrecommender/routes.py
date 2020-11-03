@@ -4,7 +4,7 @@ import pandas as pd
 from bookrecommender.forms import GetField
 
 DEFAULT_H = "Python Programming"
-
+DEFAULT_TITLE = ""
 @app.route("/home", methods=["POST", "GET"])
 @app.route("/", methods=["POST", "GET"])
 def home():
@@ -25,16 +25,18 @@ def display():
     
 @app.route("/search", methods=["POST", "GET"])
 def search():
-    form = GetField(request.form)
+    if request.method == 'POST':
+        title = request.form["books"]
+    else:
+        title = DEFAULT_TITLE
+
     data_read = pd.read_csv("./bookrecommender/Dataset.csv")
-    title_sort = pd.DataFrame([form.title.data], columns=["Title"])
+    title_sort = pd.DataFrame([title], columns=["Title"])
     merge_title = pd.merge(title_sort, data_read.sort_values(by=["rating-avg"], ascending=False))
-    publisher_sort = pd.DataFrame([form.title.data], columns=["Publishers"])
+    publisher_sort = pd.DataFrame([title], columns=["Publishers"])
     merge_publisher = pd.merge(publisher_sort, data_read.sort_values(by=["rating-avg"], ascending=False))
     title_df = pd.DataFrame(merge_title)
     publish_df = pd.DataFrame(merge_publisher)
 
-    return render_template('search.html', title=list(title_df.values.tolist()),
-                                          publish=list(publish_df.values.tolist()), 
-                                          form=form)
+    return render_template('search.html', title=list(title_df.values.tolist()),publish=list(publish_df.values.tolist()))
     
