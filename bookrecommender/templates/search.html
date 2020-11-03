@@ -3,17 +3,20 @@
 {% endblock %} 
 
 {%block body%}
-<div class="container" style="margin-top: 30px">
-  <div class="col">
-    <form method="POST" action="">
-      <div class="form-group">
-        <h2>{{form.title.label(class="form-control-label")}}</h2>
-        {{form.title(class="form-control")}}
-      </div>
-      <div class="form-group">{{form.submit(class="btn btn-primary")}}</div>
+<nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand" href="{{url_for('home')}}">Book Recommender System</a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{{url_for('display')}}">Home</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0" method="POST" action="">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" id="books" name="books" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
-</div>
+</nav>
 <!-- For Title -->
 <div class="container-lg " style="margin-top: 30px;">
   <div class=col>
