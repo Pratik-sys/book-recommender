@@ -111,14 +111,17 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="{{url_for('display')}}">Home</a>
+        <a href="{{url_for('display')}}">
+          <i class="fas fa-home fa-lg nav-link"></i>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{url_for('search')}}">Search</a>
+        <a href="{{url_for('search')}}">
+          <i class="fas fa-search fa-lg nav-link"  style="margin-left: 20px;"></i>
+        </a>
       </li>
       <li class="nav-item dropdown">
           <form method="POST" action="">
-              <div class="row" style="padding-left:5rem;">
+              <div class="row" style="padding-left:45rem;">
               <select class="selectpicker" id="catdrop" name="catdrop" onchange="this.form.submit()">
                 <option>SELECT CATEGORY</option>
                 <option>Machine Learning</option>
@@ -135,10 +138,6 @@
             </form>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
   </div>
 </nav>
 
