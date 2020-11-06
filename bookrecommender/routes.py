@@ -22,6 +22,10 @@ def home():
 @app.route("/display", methods=["POST", "GET"])
 def display():
     return render_template('display.html')
+
+@app.route("/test", methods=["POST", "GET"])
+def test():
+    return render_template('test.html')
     
 @app.route("/search", methods=["POST", "GET"])
 def search():
