@@ -1,7 +1,6 @@
 {% extends 'base.html'%} {% block head%}
 <title>Book recommendor</title>
 {% endblock %} {%block body%}
-
 <nav class="navbar navbar-expand-lg">
   <a class="navbar-brand" href="{{url_for('home')}}">Book Recommender System</a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -37,7 +36,7 @@
   </div>
 </nav>
 
-<div class="container-lg mr-1 " style="margin-top: 30px;">
+<div class="container-lg" style="margin-top: 30px;">
   <div class=col>
   <div class="row">
     {%for row in row_data%}
