@@ -1,124 +1,10 @@
 {% extends 'base.html'%} {% block head%}
 <title>Book recommendor</title>
 {% endblock %} {%block body%}
-<div class="sidenav">
-  <h4 style="color: white; text-align: center;text-decoration: underline;">
-    Our Recommendation
-  </h4>
-  <br>
-  <h5 style="color: white; text-align: center;">
-    Machine Learning:
-  </h5>
-  <p style="color: gold;text-align: center;">
-    Rating: 4.5<br>
-  </p>
-  <p style="color: white; text-align: center;">
-    Fundamentals of Machine Learning for Predictive Data Analytics
-  </p>
-  <hr style="background-color: white;">
-  <h5 style="color: white; text-align: center;">
-    Python Programming
-  </h5>
-  <p style="color: gold; text-align: center;">
-    Rating:4.75
-  </p>
-  <p style="color: white;text-align: center;">
-    Fluent Python: Clear, Concise, and Effective Programming
-  </p>
-  <hr style="background-color: white;">
-  <h5 style="color: white; text-align: center;">
-    Programming
-  </h5>
-  <p style="color: gold; text-align: center;">
-    Rating:4.8
-  </p>
-  <p style="color: white;text-align: center;">
-    Art of Computer Programming
-  </p>
-  <hr style="background-color: white;">
-  <h5 style="color: white; text-align: center;">
-    Mathematics
-  </h5>
-  <p style="color: gold; text-align: center;">
-    Rating:4.35
-  </p>
-  <p style="color: white; text-align: center;">
-    Higher Engineering Mathematics
-  </p>
-  <hr style="background-color: white;">
-  <h5 style="color: white; text-align: center;">
-    Artificial Intelligence
-  </h5>
-  <p style="color: gold; text-align: center;">
-    Rating:4.42
-  </p>
-  <p style="color: white; text-align: center;">
-    Make Your Own Neural Network
-  </p>
-  <hr style="background-color: white;">
-  <h5 style="color: white; text-align: center;">
-    C Programming
-  </h5>
-  <p style="color: gold; text-align: center;">
-    Rating:4.8
-  </p>
-  <p style="color: white; text-align: center;">
-    Basic Computation and Programming with C
-  </p>
-  <hr style="background-color: white;">
-  <h5 style="color: white; text-align: center;">
-    C++ Programming
-  </h5>
-  <p style="color: gold; text-align: center;">
-    Rating:4.02
-  </p>
-  <p style="color: white; text-align: center;">
-    Programming: C ++ Programming: Programming Language for Beginners: Learn in A Day!
-  </p>
-  <hr style="background-color: white;">
-  <h5 style="color: white; text-align: center;">
-    Image Processing
-  </h5>
-  <p style="color: gold; text-align: center;">
-    Rating:4.92
-  </p>
-  <p style="color: white; text-align: center;">
-    Handbook of Image and Video Processing
-  </p>
-  <hr style="background-color: white;">
-  <h5 style="color: white; text-align: center;">
-    VLSI
-  </h5>
-  <p style="color: gold; text-align: center;">
-    Rating:4.9
-  </p>
-  <p style="color: white; text-align: center;">
-    Digital VLSI Design
-  </p>
-  <hr style="background-color: white;">
-  <h5 style="color: white; text-align: center;">
-   Java Programming
-  </h5>
-  <p style="color: gold; text-align: center;">
-    Rating:4.5
-  </p>
-  <p style="color: white; text-align: center;">
-    Java All-in-One for Dummies
-  </p>
-</div>
 <nav class="navbar navbar-expand-lg">
   <a class="navbar-brand" href="{{url_for('home')}}">Book Recommender System</a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a href="{{url_for('display')}}">
-          <i class="fas fa-home fa-lg nav-link"></i>
-      </li>
-      <li class="nav-item">
-        <a href="{{url_for('search')}}">
-          <i class="fas fa-search fa-lg nav-link"  style="margin-left: 20px;"></i>
-        </a>
-      </li>
       <li class="nav-item dropdown">
           <form method="POST" action="">
               <div class="row" style="padding-left:45rem;">
@@ -141,7 +27,7 @@
   </div>
 </nav>
 
-<div class="container-lg mr-1 " style="margin-top: 30px;">
+<div class="container" style="margin-top: 30px;">
   <div class=col>
   <div class="row">
     {%for row in row_data%}

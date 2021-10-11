@@ -1,10 +1,9 @@
 body{
     font-family: 'B612', sans-serif; 
-    background-image: url("image/background.jpeg");
-    /* background-color: #D2D6DE; */
+
 }
 .navbar{
-    background-color: #347FBE;
+    background-color: black;
 }
 img{
     height: 8cm;
@@ -29,28 +28,4 @@ img{
     margin-bottom: 10rem;  
     border-radius:5px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-.page-footer{
-    background-color:#FFFF;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-.sidenav {
-    height: 70%;
-    width: 250px;
-    left:0;
-    position: fixed;
-    background-color:#24292E;
-    overflow-x: hidden;
-    margin-top: 110px;
-    border-radius: 3px;
-}
-.fa-search:hover {
-    text-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-.fa-home:hover {
-    text-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-
 }
