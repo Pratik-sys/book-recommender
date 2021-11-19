@@ -19,19 +19,3 @@ $ cd book-recommender
 ```bash
 $ python3 run.py 
 ```
-
-## view  deployment
-
-https://recommender-book.herokuapp.com/
-
-
-### TODO
-
-- [x] Collecting the Datasets from kaggle.
-- [ ] Functional UI using bootstrap 
-- [x] Hosting application on Heroku.
-- [x] Documenting all the things properly.
-- [x] Get to know about Panda's library.
-- [x] Display books in cards form 
-- [x] Add drop down for better understanding for users
-- [x] Adding Bootstrap Modals to each books for description.
