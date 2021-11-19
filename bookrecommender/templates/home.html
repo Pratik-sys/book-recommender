@@ -1,75 +1,100 @@
 {% extends 'base.html'%} {% block head%}
 <title>Book recommendor</title>
 {% endblock %} {%block body%}
-<nav class="navbar navbar-expand-lg">
-  <a class="navbar-brand" href="{{url_for('home')}}">Book Recommender System</a>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item dropdown">
-          <form method="POST" action="">
-              <div class="row" style="padding-left:45rem;">
-              <select class="selectpicker" id="catdrop" name="catdrop" onchange="this.form.submit()">
-                <option>SELECT CATEGORY</option>
-                <option>Machine Learning</option>
-                <option>Python Programming</option>
-                <option>Basic Programming</option>
-                <option>Mathematics</option>
-                <option>Artificial Intelligence</option> 
-                <option>C Programming</option> 
-                <option>Image Processing</option> 
-                <option>VLSI</option> 
-                <option>Java Programming</option> 
-              </select>
-            </div>
-            </form>
-      </li>
-    </ul>
+<nav class="navbar fixed-top navbar-dark bg-dark">
+  <div class="container d-flex justify-content-between">
+    <a class="navbar-brand" href="{{url_for('home')}}"
+      >Book Recommender System</a
+    >
+    <form method="POST" action="">
+      <select
+        class="form-select"
+        id="catdrop"
+        name="catdrop"
+        onchange="this.form.submit()"
+      >
+        <option>SELECT CATEGORY</option>
+        <option>Machine Learning</option>
+        <option>Python Programming</option>
+        <option>Basic Programming</option>
+        <option>Mathematics</option>
+        <option>Artificial Intelligence</option>
+        <option>C Programming</option>
+        <option>Image Processing</option>
+        <option>VLSI</option>
+        <option>Java Programming</option>
+      </select>
+    </form>
   </div>
 </nav>
 
-<div class="container" style="margin-top: 30px;">
-  <div class=col>
-  <div class="row">
-    {%for row in row_data%}
-    <div class="modal fade" id="exampleModal{{loop.index}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">{{row[2]}}</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            {{row[5]}}
-            <hr>
-            <p>Publisher:
-              {{row[8]}}
-            </p>
-            <hr>
-            <p>Date:
-              {{row[6]}}
-            </p>
-          </div>
-          
+<div class="container">
+  {%for row in row_data%}
+  <div
+    class="modal fade"
+    id="exampleModal{{loop.index}}"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{row[2]}}</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          {{row[5]}}
+          <hr />
+          <p>Publisher: {{row[8]}}</p>
+          <hr />
+          <p>Date: {{row[6]}}</p>
         </div>
       </div>
     </div>
-    <div class="card mx-auto text-center">
-      <img src="{{row[1]}}" class="card-img-top" alt="#" data-toggle="modal" data-target="#exampleModal{{loop.index}}">
-      <div class="card-body" >
-        <h5 class="card-title" style=" font-size: medium;">{{row[2]}}</h5>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item" style="background-color: white; ">Rating:{{row[4]}}</li>
-      </ul>
-      <div class="card-body">
-        <a href="{{row[9]}}" class="btn btn-danger">Buy Here</a>
+  </div>
+  {%endfor%}
+</div>
+
+<div class="container">
+  <div class="row d-flex justify-content-center" style="margin: 70px 0">
+    {%for i in row_data%}
+    <div class="card mb-2" style="max-width: 850px; border: none">
+      <div class="row">
+        <div class="col p-0 d-flex justify-content-start">
+          <img
+            src="{{i[1]}}"
+            class="card-img-top"
+            alt="#"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal{{loop.index}}"
+            style="width: 200px"
+          />
+        </div>
+        <div class="col">
+          <div class="row">
+            <div class="card-body">
+              <h5 class="card-title" style="font-size: medium">{{i[2]}}</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item" style="background-color: white">
+                Rating:{{i[4]}}
+              </li>
+            </ul>
+            <div class="card-body">
+              <a href="{{i[9]}}" class="btn btn-danger">Buy Here</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <hr />
     {%endfor%}
   </div>
 </div>
-</div>
-
 {% endblock %}

@@ -1,31 +1,4 @@
 body{
-    font-family: 'B612', sans-serif; 
+    font-family: 'Poppins', sans-serif;
 
-}
-.navbar{
-    background-color: black;
-}
-img{
-    height: 8cm;
-    width: 7cm;
-}
-.navbar-brand{
-    font-size: 150%;
-    font-family: 'B612', sans-serif; 
-    color: #FFFF;
-}
-.navbar-brand:hover{
-    color: white;
-    text-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-
-}
-.nav-link{
-    color: white ;
-}
-.card{
-    background-color:white;
-    width: calc(25% - 20px);
-    margin-bottom: 10rem;  
-    border-radius:5px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }

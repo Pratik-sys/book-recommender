@@ -16,5 +16,5 @@ def home():
     merge_books = pd.merge(sort_books, data_read.sort_values(by=["rating-avg"], ascending=False))
     df = pd.DataFrame(merge_books)
 
-    return render_template("home.html",row_data=list(df.values.tolist()))
+    return render_template("home.html",h=h,row_data=list(df.values.tolist()))
     
