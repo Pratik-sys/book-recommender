@@ -3,7 +3,7 @@
 {% endblock %} {%block body%}
 <nav class="navbar fixed-top navbar-dark bg-dark">
   <div class="container d-flex justify-content-between">
-    <a class="navbar-brand" href="{{url_for('home')}}"
+    <a class="navbar-brand" href="/"
       >Book Recommender System</a
     >
     <form method="POST" action="">
@@ -12,8 +12,9 @@
         id="catdrop"
         name="catdrop"
         onchange="this.form.submit()"
+        style="text-transform: capitalize;"
       >
-        <option>SELECT CATEGORY</option>
+        <option>{{section if section else "SELECT CATEGORY"}}</option>
         <option>Machine Learning</option>
         <option>Python Programming</option>
         <option>Basic Programming</option>
